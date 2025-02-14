@@ -64,5 +64,7 @@
     ./util/persistence.nix
     ./util/project-nvim.nix
     ./util/snacks.nix
+
+    ./discord.nix
   ];
 }
