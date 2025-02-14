@@ -8,6 +8,7 @@
     ./settings.nix
     ./lazy.nix
     ./plugins
+    ./keymaps_vscode.nix
   ];
 
   extraPackages = with pkgs; [
