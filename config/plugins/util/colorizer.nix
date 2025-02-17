@@ -2,7 +2,7 @@
 {
   extraPlugins = [
     (mkPkgs "volt" inputs.volt)
-    (mkPkgs "minty" inputs.minty)
+    # (mkPkgs "minty" inputs.minty)
   ];
 
   plugins.colorizer = {
@@ -18,12 +18,12 @@
     };
   };
 
-  keymaps = [
-    {
-      mode = "n";
-      key = "<leader>uc";
-      action = "<cmd>lua require('minty.huefy').open()<cr>";
-      options.desc = "Minty Color Picker";
-    }
-  ];
+  # keymaps = [
+  #   {
+  #     mode = "n";
+  #     key = "<leader>uc";
+  #     action = "<cmd>lua require('minty.huefy').open()<cr>";
+  #     options.desc = "Minty Color Picker";
+  #   }
+  # ];
 }

@@ -38,6 +38,7 @@
     ./lang/typescript.nix
     ./lang/yaml.nix
     ./lang/rust.nix
+    ./lang/tailwind.nix
 
     ./treesitter/treesitter.nix
     ./treesitter/treesitter-textobjects.nix

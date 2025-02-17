@@ -2,7 +2,11 @@
   description = "A nixvim configuration";
 
   inputs = {
-    nixvim.url = "github:nix-community/nixvim";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     flake-utils.url = "github:numtide/flake-utils";
 
     # color tools
@@ -15,14 +19,18 @@
       url = "github:NvChad/volt";
       flake = false;
     };
+
+    tree-sitter-rstml = {
+      url = "github:rayliwell/tree-sitter-rstml";
+      flake = false;
+    };
   };
 
   outputs =
-    {
-      nixvim,
-      flake-utils,
-      nixpkgs,
-      ...
+    { nixvim
+    , flake-utils
+    , nixpkgs
+    , ...
     }@inputs:
     flake-utils.lib.eachDefaultSystem (
       system:

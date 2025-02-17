@@ -1,4 +1,13 @@
+{ pkgs, ... }:
 {
+  extraPackages = with pkgs; [
+    leptosfmt
+  ];
+
+  extraPlugins = [
+    (mkPkgs "tree-sitter-rstml" inputs.tree-sitter-rstml)
+  ];
+
   plugins = {
     rustaceanvim = {
       enable = true;
@@ -18,5 +27,6 @@
     };
 
     crates.enable = true;
+    lsp.servers.rust-analyzer.enable = true;
   };
 }
