@@ -47,6 +47,31 @@
 
     clangd-extensions = {
       enable = true;
+<<<<<<< HEAD
+      # extraOptions = {
+      #   inlay_hints = {
+      #     inline = false;
+      #   };
+      #   codelens.enable = true;
+      # };
+      ast = {
+        roleIcons = {
+          type = "";
+          declaration = "";
+          expression = "";
+          specifier = "";
+          statement = "";
+          templateArgument = "";
+        };
+        kindIcons = {
+          compound = "";
+          recovery = "";
+          translationUnit = "";
+          packExpansion = "";
+          templateTypeParm = "";
+          templateTemplateParm = "";
+          templateParamObject = "";
+=======
       settings = {
         inlay_hints = {
           inline = false;
@@ -71,6 +96,7 @@
             templateTemplateParm = "";
             templateParamObject = "";
           };
+>>>>>>> upstream/main
         };
       };
     };
