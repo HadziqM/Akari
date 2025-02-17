@@ -1,12 +1,17 @@
-{ pkgs, ... }:
+{ pkgs, mkPkgs, inputs, ... }:
 {
   extraPackages = with pkgs; [
     leptosfmt
   ];
 
   extraPlugins = [
-    (mkPkgs "tree-sitter-rstml" inputs.tree-sitter-rstml)
+    (mkPkgs "rustvim" inputs.rustvim)
   ];
+
+  extraConfigLua = # lua
+    ''
+      vim.g.rustfmt_autosave = 1
+    '';
 
   plugins = {
     rustaceanvim = {
@@ -27,6 +32,5 @@
     };
 
     crates.enable = true;
-    lsp.servers.rust-analyzer.enable = true;
   };
 }

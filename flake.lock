@@ -228,24 +228,27 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1739446958,
-        "narHash": "sha256-+/bYK3DbPxMIvSL4zArkMX0LQvS7rzBKXnDXLfKyRVc=",
-        "path": "/nix/store/brjzz8wv5k09bq0yrvhc1j4hd8677k21-source",
-        "rev": "2ff53fe64443980e139eaa286017f53f88336dd0",
-        "type": "path"
+        "lastModified": 1739667012,
+        "narHash": "sha256-6QWdUgz2O2Mm+pYx/AYB4Rot5/s1OR1C6bt30TI81yY=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "1dcdd535fef84d4671129a10e7072d56dca9a4d3",
+        "type": "github"
       },
       "original": {
-        "id": "nixpkgs",
-        "type": "indirect"
+        "owner": "nixos",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
       }
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1738797219,
-        "narHash": "sha256-KRwX9Z1XavpgeSDVM/THdFd6uH8rNm/6R+7kIbGa+2s=",
+        "lastModified": 1739667012,
+        "narHash": "sha256-6QWdUgz2O2Mm+pYx/AYB4Rot5/s1OR1C6bt30TI81yY=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "1da52dd49a127ad74486b135898da2cef8c62665",
+        "rev": "1dcdd535fef84d4671129a10e7072d56dca9a4d3",
         "type": "github"
       },
       "original": {
@@ -263,7 +266,9 @@
         "git-hooks": "git-hooks",
         "home-manager": "home-manager",
         "nix-darwin": "nix-darwin",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
         "nuschtosSearch": "nuschtosSearch",
         "treefmt-nix": "treefmt-nix"
       },
@@ -309,7 +314,25 @@
         "blink-compat": "blink-compat",
         "flake-utils": "flake-utils",
         "nixpkgs": "nixpkgs",
-        "nixvim": "nixvim"
+        "nixvim": "nixvim",
+        "rustvim": "rustvim",
+        "tree-sitter-rstml": "tree-sitter-rstml"
+      }
+    },
+    "rustvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1669559182,
+        "narHash": "sha256-70kp644jOtJ4wguty/SUFX+YEsoxW12LGg3vZh7BdPY=",
+        "owner": "rust-lang",
+        "repo": "rust.vim",
+        "rev": "889b9a7515db477f4cb6808bef1769e53493c578",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rust-lang",
+        "repo": "rust.vim",
+        "type": "github"
       }
     },
     "systems": {
@@ -339,6 +362,25 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "tree-sitter-rstml": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1722127529,
+        "narHash": "sha256-fz2dlzpkAN9YaECBQpOr8ihdslf/kqZQYIn11KXw2JQ=",
+        "owner": "rayliwell",
+        "repo": "tree-sitter-rstml",
+        "rev": "b8d0f672ee55a79d2919a17e0310651a9cc60ec9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rayliwell",
+        "ref": "flake",
+        "repo": "tree-sitter-rstml",
         "type": "github"
       }
     },

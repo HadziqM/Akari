@@ -14,16 +14,19 @@
       flake = false;
     };
 
-    tree-sitter-rstml = {
-      url = "github:rayliwell/tree-sitter-rstml";
+    rustvim = {
+      url = "github:rust-lang/rust.vim";
       flake = false;
     };
+
+    tree-sitter-rstml.url = "github:rayliwell/tree-sitter-rstml/flake";
   };
 
   outputs =
     { nixvim
     , flake-utils
     , nixpkgs
+    , tree-sitter-rstml
     , ...
     }@inputs:
     flake-utils.lib.eachDefaultSystem (
@@ -37,7 +40,13 @@
         nixvim' = nixvim.legacyPackages.${system};
         nixvimModule = {
           inherit pkgs;
-          module = import ./config; # import the module directly
+          module = {
+            imports = [
+              ./config
+              tree-sitter-rstml.nixvimModule
+            ];
+          };
+          # module = imports ./config; # import the module directly
           # You can use `extraSpecialArgs` to pass additional arguments to your module files
           extraSpecialArgs = {
             inherit inputs;
