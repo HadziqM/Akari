@@ -5,9 +5,10 @@
       vim.fn.sign_define("diagnosticsignwarn", { text = " ", texthl = "diagnosticwarn", linehl = "", numhl = "" })
       vim.fn.sign_define("diagnosticsignhint", { text = "󰌵", texthl = "diagnostichint", linehl = "", numhl = "" })
       vim.fn.sign_define("diagnosticsigninfo", { text = " ", texthl = "diagnosticinfo", linehl = "", numhl = "" })
+
     '';
 
-    # feature that enhances the way Neovim loads and executes Lua modules, 
+    # feature that enhances the way Neovim loads and executes Lua modules,
     # offering improved performance and flexibility.
     luaLoader.enable = true;
 
@@ -82,6 +83,9 @@
       local opt = vim.opt
       local g = vim.g
       local o = vim.o
+
+      --system clipboard support
+      opt.clipboard:append("unnamedplus")
         -- Neovide
       if g.neovide then
         -- Neovide options
