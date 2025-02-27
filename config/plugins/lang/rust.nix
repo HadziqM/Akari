@@ -1,4 +1,9 @@
-{ pkgs, mkPkgs, inputs, ... }:
+{
+  pkgs,
+  mkPkgs,
+  inputs,
+  ...
+}:
 {
   extraPackages = with pkgs; [
     leptosfmt
@@ -21,7 +26,11 @@
         default_settings.rust-analyzer = {
           checkOnsave = true;
           rustfmt = {
-            overrideCommand = [ "leptosfmt" "--stdin" "--rustfmt" ];
+            overrideCommand = [
+              "leptosfmt"
+              "--stdin"
+              "--rustfmt"
+            ];
           };
           cargo = {
             loadDirsFromCheck = true;
@@ -30,6 +39,8 @@
         };
       };
     };
+
+    # null-ls.enable = true;
 
     crates.enable = true;
   };

@@ -19,15 +19,21 @@
       flake = false;
     };
 
+    crates = {
+      url = "github:saecki/crates.nvim";
+      flake = false;
+    };
+
     tree-sitter-rstml.url = "github:rayliwell/tree-sitter-rstml/flake";
   };
 
   outputs =
-    { nixvim
-    , flake-utils
-    , nixpkgs
-    , tree-sitter-rstml
-    , ...
+    {
+      nixvim,
+      flake-utils,
+      nixpkgs,
+      tree-sitter-rstml,
+      ...
     }@inputs:
     flake-utils.lib.eachDefaultSystem (
       system:
