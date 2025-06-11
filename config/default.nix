@@ -7,6 +7,7 @@
     ./keymaps.nix
     ./settings.nix
     ./plugins
+    ./keymaps_vscode.nix
   ];
 
   extraPackages = with pkgs; [

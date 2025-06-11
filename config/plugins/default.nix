@@ -1,7 +1,7 @@
 {
   imports = [
-    ./ai/avante.nix
-    ./ai/copilot.nix
+    # ./ai/avante.nix
+    # ./ai/copilot.nix
     ./ai/windsurf.nix
 
     ./completion/blink.nix
@@ -33,9 +33,9 @@
     ./lsp/lspsaga.nix
     ./lsp/trouble.nix
 
-    ./lang/cpp.nix
+    # ./lang/cpp.nix
     ./lang/css.nix
-    ./lang/docker.nix
+    # ./lang/docker.nix
     ./lang/html.nix
     ./lang/json.nix
     ./lang/lua.nix
@@ -45,6 +45,7 @@
     ./lang/shell.nix
     ./lang/typescript.nix
     ./lang/yaml.nix
+    ./lang/rust.nix
 
     ./treesitter/treesitter.nix
     ./treesitter/treesitter-textobjects.nix
@@ -73,5 +74,7 @@
     ./util/persistence.nix
     ./util/project-nvim.nix
     ./util/package-info.nix
+
+    ./discord.nix
   ];
 }

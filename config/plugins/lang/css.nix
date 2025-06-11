@@ -30,6 +30,12 @@
           (lib.getExe pkgs.tailwindcss-language-server)
           "--stdio"
         ];
+        settings.extension.patterns = {
+          rust = [
+            "class=[\"']([^\"']+)[\"']"
+          ];
+        };
+
       };
     };
   };

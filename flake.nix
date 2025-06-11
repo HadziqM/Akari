@@ -8,6 +8,17 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     flake-utils.url = "github:numtide/flake-utils";
+
+    rustvim = {
+      url = "github:rust-lang/rust.vim";
+      flake = false;
+    };
+
+    # crates = {
+    #   url = "github:saecki/crates.nvim";
+    #   flake = false;
+    # };
+
   };
 
   outputs =
